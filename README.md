@@ -6,7 +6,7 @@ Madagascar's 23 regions between 2005 and 2024, built from
 
 ## Live demo
 
-[Link to add after deployment on Streamlit Cloud]
+https://madagascar-climate-dashboard-rakotomahefa-zotahina.streamlit.app
 
 ## Features
 
