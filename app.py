@@ -216,7 +216,7 @@ with tab_map:
     else:
         color_col, scale, unit = "Precipitation", RAIN_SCALE, "mm/day"
 
-    fig_map = px.choropleth(
+    fig_map = px.choropleth_map(
         geo_agg,
         geojson=geojson,
         locations="geo_region",
@@ -225,8 +225,11 @@ with tab_map:
         color_continuous_scale=scale,
         hover_name="geo_region",
         labels={color_col: unit},
+        map_style="carto-darkmatter",
+        center={"lat": -19.0, "lon": 46.7},
+        zoom=4.4,
+        opacity=0.85,
     )
-    fig_map.update_geos(fitbounds="locations", visible=False, bgcolor="rgba(0,0,0,0)")
     fig_map.update_layout(
         paper_bgcolor="rgba(0,0,0,0)",
         margin=dict(l=0, r=0, t=10, b=0),
